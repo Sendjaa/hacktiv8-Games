@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Builder</title>
+    <!-- Menggunakan CSS kustom untuk styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../public/kingdomBuilder.css">
+</head>
+<body>
+
+    <!-- Container Utama Game -->
+    <div class="game-container">
+        
+        <!-- Judul Game -->
+        <h1>Kingdom Builder</h1>
+        <p>Bangun kerajaanmu dan kelola sumber dayamu!</p>
+
+        <!-- Tampilan Status Game -->
+        <div class="resource-grid">
+            <!-- Kartu Tampilan Sumber Daya -->
+            <div class="resource-card">
+                <p>Emas:</p>
+                <p id="gold">0</p>
+            </div>
+            <div class="resource-card">
+                <p>Makanan:</p>
+                <p id="food">0</p>
+            </div>
+            <div class="resource-card">
+                <p>Kayu:</p>
+                <p id="wood">0</p>
+            </div>
+            <div class="resource-card">
+                <p>Populasi:</p>
+                <p id="population">0</p>
+            </div>
+        </div>
+
+        <!-- Bagian Bangunan dan Aksi -->
+        <h2>Tindakan</h2>
+        <div class="action-grid">
+            <!-- Tombol Bangunan -->
+            <div class="action-section">
+                <h3>Bangunan</h3>
+                <div class="button-group">
+                    <button id="build-house" class="btn btn-teal">
+                        Bangun Rumah (10 Kayu)
+                    </button>
+                    <button id="build-farm" class="btn btn-teal">
+                        Bangun Pertanian (10 Kayu)
+                    </button>
+                    <button id="build-lumberjack" class="btn btn-teal">
+                        Bangun Penebang Kayu (10 Kayu)
+                    </button>
+                    <button id="build-market" class="btn btn-teal">
+                        Bangun Pasar (10 Kayu)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Aksi Lain -->
+            <div class="action-section">
+                <h3>Tindakan Lain</h3>
+                <div class="button-group">
+                    <button id="gather-wood" class="btn btn-emerald">
+                        Panen Kayu (+5)
+                    </button>
+                    <button id="gather-food" class="btn btn-emerald">
+                        Panen Makanan (+5)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Kontrol Game -->
+            <div class="action-section">
+                <h3>Kontrol</h3>
+                <div class="button-group">
+                    <button id="reset-game" class="btn btn-rose">
+                        Reset Game
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Log Pesan -->
+        <h2>Log Pesan</h2>
+        <div id="message-log">
+            <!-- Pesan akan ditambahkan di sini secara dinamis -->
+        </div>
+
+    </div>
+
+    <script src="../public/kingdomBuilder.js">       
+    </script>
+</body>
+</html>

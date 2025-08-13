@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacktiv8 Game Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/style_dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="header">
+            <div class="user-info">
+                <div class="avatar">GX</div>
+                <div class="user-details">
+                    <h3>Gamer X</h3>
+                    <p>Level 42 • Online</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-label">XP</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">89</div>
+                    <div class="stat-label">Wins</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Rank</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2><i class="fas fa-gamepad"></i> Hacktiv8 Game</h2>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-section="dashboard">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="games">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Games</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="leaderboard">
+                            <i class="fas fa-trophy"></i>
+                            <span>Leaderboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="friends">
+                            <i class="fas fa-users"></i>
+                            <span>Friends</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="store">
+                            <i class="fas fa-store"></i>
+                            <span>Store</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <div id="dashboard-section" class="page-section active">
+                <div class="welcome-section">
+                    <h1>Selamat Datang Kembali!</h1>
+                    <p>Siap untuk petualangan gaming hari ini?</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card" onclick="playGame()">
+                        <div class="card-header">
+                            <div class="card-icon play">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div>
+                                <h3>Main Sekarang</h3>
+                                <p>Lanjutkan petualangan epikmu dan raih skor tertinggi!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="showAchievements()">
+                        <div class="card-header">
+                            <div class="card-icon trophy">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div>
+                                <h3>Achievements</h3>
+                                <p>Lihat koleksi trofi dan pencapaianmu yang menakjubkan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="showFriends()">
+                        <div class="card-header">
+                            <div class="card-icon friends">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3>Teman Online</h3>
+                                <p>23 teman sedang online. Ajak mereka bermain bersama!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openStore()">
+                        <div class="card-header">
+                            <div class="card-icon store">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div>
+                                <h3>Game Store</h3>
+                                <p>Temukan game baru dan item eksklusif di toko kami.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3 style="margin-bottom: 1rem;"><i class="fas fa-chart-line"></i> Progress Harian</h3>
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>XP Gained</span>
+                            <span>750 / 1000</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Games Played</span>
+                            <span>8 / 10</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span>Achievements</span>
+                            <span>3 / 5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Games Section -->
+            <div id="games-section" class="page-section">
+                <div class="welcome-section">
+                    <h1>Game Library</h1>
+                    <p>Jelajahi koleksi game terbaik kami</p>
+                </div>
+
+                <div class="filter-tabs">
+                    <div class="filter-tab active" data-category="all">Semua</div>
+                    <div class="filter-tab" data-category="action">Action</div>
+                    <div class="filter-tab" data-category="puzzle">Puzzle</div>
+                    <div class="filter-tab" data-category="strategy">Strategy</div>
+                    <div class="filter-tab" data-category="arcade">Arcade</div>
+                    <div class="filter-tab" data-category="adventure">Adventure</div>
+                </div>
+
+                <div class="games-grid" id="gamesGrid">
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Memory Game</h4>
+                            <p>Petualangan luar angkasa yang mendebarkan dengan grafis memukau dan gameplay yang adiktif.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>4.8</span>
+                                </div>
+                                <div class="game-category">Action</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('./app.html')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-category="puzzle">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Mind Bender</h4>
+                            <p>Asah otakmu dengan teka-teki yang menantang dan melatih kemampuan logika.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★☆</div>
+                                    <span>4.5</span>
+                                </div>
+                                <div class="game-category">Puzzle</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('mindBender.html')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-category="strategy">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Kingdom Builder</h4>
+                            <p>Bangun kerajaan impianmu dan taklukkan dunia dengan strategi yang cerdas.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>4.9</span>
+                                </div>
+                                <div class="game-category">Strategy</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('./kingdomBuilder.html')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-category="arcade">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Retro Runner</h4>
+                            <p>Nostalgia arcade klasik dengan twist modern yang akan membuatmu ketagihan.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★☆</div>
+                                    <span>4.3</span>
+                                </div>
+                                <div class="game-category">Arcade</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('Retro Runner')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-category="adventure">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Mystic Quest</h4>
+                            <p>Jelajahi dunia fantasi yang penuh misteri dan temukan harta karun tersembunyi.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>4.7</span>
+                                </div>
+                                <div class="game-category">Adventure</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('Mystic Quest')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-category="action">
+                        <div class="game-thumbnail">
+                            <i class="fas fa-fist-raised"></i>
+                        </div>
+                        <div class="game-info">
+                            <h4>Gunting Batu Kertas</h4>
+                            <p>Pertarungan epik dengan berbagai karakter unik dan skill yang menakjubkan.</p>
+                            <div class="game-stats">
+                                <div class="game-rating">
+                                    <div class="stars">★★★★☆</div>
+                                    <span>4.4</span>
+                                </div>
+                                <div class="game-category">Action</div>
+                            </div>
+                            <button class="play-button" onclick="playSpecificGame('./game2.html')">
+                                <i class="fas fa-play"></i> Main Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i> Aksi berhasil!
+    </div>
+
+    <script src="../public/dashboard.js"></script>
+</body>
+</html>

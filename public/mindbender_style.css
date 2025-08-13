@@ -1,0 +1,103 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .game-container {
+            max-width: 450px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+            background-color: #161b22;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .game-button {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .game-button:hover:not(.active) {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+        
+        /* Warna tombol */
+        #green { background-color: #238636; }
+        #red { background-color: #f85149; }
+        #yellow { background-color: #fdd835; }
+        #blue { background-color: #4f9afb; }
+
+        /* Animasi saat tombol menyala */
+        .game-button.active {
+            opacity: 1;
+            box-shadow: 0 0 20px 5px var(--button-color);
+            transform: scale(1.1);
+        }
+        
+        .start-button {
+            background-color: #4f9afb;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .start-button:hover {
+            background-color: #6cb6ff;
+            transform: translateY(-2px);
+        }
+
+        .info-area {
+            font-size: 1.25rem;
+            font-weight: 700;
+            min-height: 2rem;
+        }
+
+        /* Layout responsif */
+        @media (max-width: 480px) {
+            .game-board {
+                gap: 1rem;
+            }
+            .game-button {
+                height: 100px;
+            }
+        }

@@ -1,0 +1,109 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .game-container {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+            background-color: #161b22;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .choices {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .choice-button {
+            background-color: #30363d;
+            color: #f0f6fc;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: 2px solid #30363d;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .choice-button:hover {
+            background-color: #3a424a;
+            border-color: #4f9afb;
+            transform: translateY(-2px);
+        }
+
+        .result-area {
+            background-color: #21262d;
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: 100%;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .result-area.win {
+            box-shadow: 0 0 15px rgba(35, 134, 54, 0.5); /* Hijau */
+        }
+        .result-area.lose {
+            box-shadow: 0 0 15px rgba(248, 81, 73, 0.5); /* Merah */
+        }
+        .result-area.draw {
+            box-shadow: 0 0 15px rgba(253, 222, 107, 0.5); /* Kuning */
+        }
+
+        #result-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .score-display {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-top: 1rem;
+        }
+
+        /* Layout responsif */
+        @media (max-width: 480px) {
+            .choices {
+                flex-direction: column;
+            }
+            .choice-button {
+                width: 100%;
+                font-size: 1.2rem;
+            }
+        }

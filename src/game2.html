@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batu, Gunting, Kertas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../public/game2.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Batu, Gunting, Kertas</h1>
+
+        <p class="text-xl">Pilih salah satu:</p>
+        <div class="choices">
+            <button class="choice-button" onclick="playGame('Batu')">✊ Batu</button>
+            <button class="choice-button" onclick="playGame('Kertas')">✋ Kertas</button>
+            <button class="choice-button" onclick="playGame('Gunting')">✌️ Gunting</button>
+        </div>
+
+        <div class="result-area" id="result-area">
+            <p id="player-choice" class="text-gray-400">Kamu: -</p>
+            <p id="computer-choice" class="text-gray-400">Komputer: -</p>
+            <p id="result-text">Mulai bermain!</p>
+        </div>
+
+        <div class="score-display">
+            <p>Skor Kamu: <span id="player-score">0</span></p>
+            <p>Skor Komputer: <span id="computer-score">0</span></p>
+        </div>
+    </div>
+
+    <script src="../public/game2.js">
+    </script>
+</body>
+</html>
